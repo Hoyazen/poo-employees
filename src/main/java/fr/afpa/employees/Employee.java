@@ -1,4 +1,4 @@
-package fr.afpa.employees;
+ package fr.afpa.employees;
 
 /*
 Objectif :
@@ -17,10 +17,17 @@ class Employee
 	private String registrationNumber;
 
 	// TODO compléter les attributs comme présenté dans le PDF
+	private String lastName;
+	private String firstName;
+	private double salary;
+	private final int socialRate = 30;
 
 	// TODO compléter le constructeur de la classe
-	public Employee(String registrationNumber) {
+	public Employee(String registrationNumber, String lastName, String firstName, double salary) {
 		this.registrationNumber = registrationNumber;
+		this.lastName = lastName;
+		this.firstName = firstName;
+		this.salary = salary;
 	}
 
 	// TODO implémenter les setters et getters de la classe (permet d'accéder aux attributs privés)
@@ -32,8 +39,33 @@ class Employee
 		this.registrationNumber = registrationNumber;
 	}
 
-	// TODO ajouter les getters et les setters
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setlastName(String lastName) throws Exception {
+		this.lastName = lastName;
+	}
+
+	public String getFistName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) throws Exception {
+		this.firstName = firstName;
+	}
+
+	public double salary() {
+		return salary;
+	}
+
+	public void setsalary(double salary) throws Exception {
+		this.salary = salary;
+	}
 
 	// TODO implémenter la méthode "toString()" qui renvoie une chaîne de caractère qui représente un objet de la classe employé
 	// plus d'information sur la méthode "toString()" -> https://codegym.cc/fr/groups/posts/fr.986.mthode-java-tostring
+	public String toString() {
+		
+	}
 }
